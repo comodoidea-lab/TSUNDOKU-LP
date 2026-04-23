@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TSUNDOKU QUEST — 積読を冒険に変えるクエストアプリ</title>
-<link rel="icon" type="image/png" sizes="512x512" href="https://cdn.jsdelivr.net/gh/comodoidea-lab/Tsundoku-Quest@main/public/icon-512.png?v=20260423">
-<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/comodoidea-lab/Tsundoku-Quest@main/public/icon-512.png?v=20260423">
-<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/comodoidea-lab/Tsundoku-Quest@main/public/icon-512.png?v=20260423">
+<link rel="icon" type="image/png" sizes="512x512" href="./favicon.png?v=20260423c">
+<link rel="shortcut icon" href="./favicon.png?v=20260423c">
+<link rel="apple-touch-icon" href="./favicon.png?v=20260423c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=VT323&display=swap" rel="stylesheet">
@@ -155,8 +155,8 @@ nav a:hover{color:var(--red-2)}
   content:"";position:absolute;left:0;right:0;bottom:-2px;height:6px;
   background:repeating-linear-gradient(90deg, var(--red) 0 8px, transparent 8px 16px);
 }
-.hero p.lead{font-size:16px;line-height:1.9;color:var(--ink-2);margin-top:22px;max-width:520px}
-.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:30px}
+.hero p.lead{font-size:16px;line-height:1.9;color:var(--ink-2);margin-top:16px;max-width:520px}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:20px}
 .hero .mono,.hero .mono a{overflow-wrap:anywhere;word-break:break-word}
 .comingsoon{
   display:inline-flex;align-items:center;justify-content:center;
@@ -290,6 +290,13 @@ footer{background:#1f1712;color:#d9c79a;padding:56px 0 24px;border-top:6px solid
 footer h4{font-family:'DotGothic16';font-size:13px;color:#f2e7c9;margin-bottom:14px;letter-spacing:.08em}
 footer a{color:#b8a87e;text-decoration:none;font-size:13px;display:block;padding:4px 0}
 footer a:hover{color:#f2e7c9}
+.foot-static-item{color:#8a7a5a;font-size:13px;display:block;padding:4px 0}
+.foot-brand-icon{
+  width:20px;
+  height:20px;
+  image-rendering:pixelated;
+  display:block;
+}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
 .foot-bottom{border-top:2px solid #3a2a1a;padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:#8a7a5a;font-family:'DotGothic16'}
 
@@ -395,6 +402,26 @@ footer a:hover{color:#f2e7c9}
     radial-gradient(circle 12px at 88% 20%, var(--sand) 98%, transparent 100%);
 }
 .adv-pin{position:absolute;font-family:'DotGothic16';font-size:10px;background:var(--panel);border:2px solid var(--line);padding:2px 5px}
+.feature-map-wrap{
+  width:100%;
+  border:3px solid var(--line);
+  box-shadow:6px 6px 0 var(--line);
+  background:var(--panel);
+  padding:6px;
+}
+.feature-map-wrap img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:3px solid var(--line);
+  image-rendering:pixelated;
+}
+.feature-map-note{
+  margin-top:8px;
+  font-size:11px;
+  color:var(--ink-2);
+  text-align:right;
+}
 
 /* ---------- style tuning from latest visual ---------- */
 body{
@@ -418,12 +445,12 @@ header{
     4px 4px 0 rgba(58,42,26,.28);
 }
 .hero{
-  padding:52px 0 44px;
+  padding:36px 0 28px;
   border-bottom:4px solid var(--line);
 }
 .hero-grid{
-  grid-template-columns:1.05fr .95fr;
-  gap:30px;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
   align-items:flex-start;
 }
 .h1{
@@ -434,7 +461,7 @@ header{
   position:relative;
   border:4px solid var(--line);
   background:#efe4c1;
-  padding:18px;
+  padding:14px;
   box-shadow:6px 6px 0 rgba(58,42,26,.32);
 }
 .hero-stage-head{
@@ -445,10 +472,10 @@ header{
 .hero-shot-grid{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:12px;
+  gap:8px;
 }
 .hero-stage-mobile{display:none}
-.hero-stage-desktop{display:block;max-width:420px;width:100%;justify-self:end}
+.hero-stage-desktop{display:block;max-width:520px;width:100%;justify-self:end}
 .hero-shot{
   margin:0;
   background:#111;
@@ -466,11 +493,12 @@ header{
 .deco{display:none}
 @media (max-width:900px){
   .wrap{padding:0 14px}
+  .hero-grid{grid-template-columns:1fr;gap:16px}
   .nav{height:auto;min-height:62px;padding:10px 0}
   .brand{font-size:16px}
   .brand-logo{width:24px;height:24px}
   .nav-cta .btn{font-size:13px;padding:10px 12px;box-shadow:2px 2px 0 var(--line)}
-  .hero{padding:28px 0}
+  .hero{padding:20px 0}
   .h1{font-size:34px;line-height:1.25}
   .hero p.lead{font-size:14px;line-height:1.7}
   .hero-stage-desktop{display:none}
@@ -770,14 +798,10 @@ header{
     <div class="card feat">
       <div class="feat-visual">
         <div style="width:100%">
-          <div class="advmap">
-            <div class="path"></div>
-            <div class="adv-pin" style="left:10%;bottom:10%">🏡 START</div>
-            <div class="adv-pin" style="left:38%;top:30%">🗻 森の章</div>
-            <div class="adv-pin" style="right:18%;top:12%">🏰 GOAL</div>
-            <!-- small hero dot -->
-            <div style="position:absolute;left:58%;top:34%;width:14px;height:14px;background:var(--red);border:2px solid var(--line)"></div>
+          <div class="feature-map-wrap">
+            <img src="./uploads/feature03-map.png" alt="TSUNDOKU QUEST 冒険マップ">
           </div>
+          <p class="feature-map-note">※画像はイメージです</p>
         </div>
       </div>
       <div>
@@ -829,7 +853,7 @@ header{
     <div class="foot-grid">
       <div>
         <div class="brand" style="color:#f2e7c9;margin-bottom:12px">
-          <span class="brand-logo" style="background:#f2e7c9;color:#1f1712">▣</span>
+          <span class="brand-logo" style="background:#f2e7c9;color:#1f1712"><img class="foot-brand-icon" src="./favicon.png" alt="TSUNDOKU QUEST アイコン"></span>
           <span>TSUNDOKU QUEST</span>
         </div>
         <p style="font-size:13px;line-height:1.9;color:#b8a87e;max-width:360px">
@@ -846,13 +870,13 @@ header{
         <h4>PRODUCT</h4>
         <a href="https://tsundoku.comodoidea.com/" target="_blank" rel="noopener">アプリを開く ↗</a>
         <a href="#features">機能一覧</a>
-        <a href="#quest">よくある困りごと</a>
+        <span class="foot-static-item">よくある困りごと(準備中)</span>
       </div>
       <div>
         <h4>DEVELOPER</h4>
         <a href="https://www.comodoidea.com/" target="_blank" rel="noopener">comodoidea ↗</a>
         <a href="https://www.comodoidea.com/" target="_blank" rel="noopener">個人開発について</a>
-        <a href="#" onclick="event.preventDefault();alert('お問い合わせは comodoidea.com より');">お問い合わせ</a>
+        <a href="mailto:info@comodoidea.com">お問い合わせ: info@comodoidea.com</a>
       </div>
       <div>
         <h4>LEGAL</h4>
