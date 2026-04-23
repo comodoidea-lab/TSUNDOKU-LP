@@ -422,9 +422,9 @@ header{
   border-bottom:4px solid var(--line);
 }
 .hero-grid{
-  grid-template-columns:1fr;
-  gap:24px;
-  align-items:stretch;
+  grid-template-columns:1.05fr .95fr;
+  gap:30px;
+  align-items:flex-start;
 }
 .h1{
   font-size:56px;
@@ -447,6 +447,8 @@ header{
   grid-template-columns:repeat(2,minmax(0,1fr));
   gap:12px;
 }
+.hero-stage-mobile{display:none}
+.hero-stage-desktop{display:block;max-width:420px;width:100%;justify-self:end}
 .hero-shot{
   margin:0;
   background:#111;
@@ -471,6 +473,8 @@ header{
   .hero{padding:28px 0}
   .h1{font-size:34px;line-height:1.25}
   .hero p.lead{font-size:14px;line-height:1.7}
+  .hero-stage-desktop{display:none}
+  .hero-stage-mobile{display:block}
   .hero-ctas{display:grid;grid-template-columns:1fr;max-width:320px}
   .hero-ctas .btn{width:100%;justify-content:center}
   .comingsoon{top:-8px;right:-6px;font-size:10px}
@@ -536,7 +540,7 @@ header{
         <span class="accent">積読</span>を冒険に変える<br>
         クエストアプリ 📖
       </h1>
-      <div class="hero-stage" style="margin-top:18px;margin-bottom:18px">
+      <div class="hero-stage hero-stage-mobile" style="margin-top:18px;margin-bottom:18px">
         <div class="hero-stage-head">📱 実際のアプリ画面（開発中）</div>
         <div class="hero-shot-grid">
           <figure class="hero-shot">
@@ -628,6 +632,17 @@ header{
           <i></i><i class="b"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="d"></i><i class="b"></i><i></i><i></i>
           <i></i><i></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i class="b"></i><i></i><i></i><i></i>
         </div>
+      </div>
+    </div>
+    <div class="hero-stage hero-stage-desktop">
+      <div class="hero-stage-head">📱 実際のアプリ画面（開発中）</div>
+      <div class="hero-shot-grid">
+        <figure class="hero-shot">
+          <img src="./uploads/pasted-1776936463997-0.png" alt="TSUNDOKU QUEST マップ画面">
+        </figure>
+        <figure class="hero-shot">
+          <img src="./uploads/pasted-1776936478411-0.png" alt="TSUNDOKU QUEST 設定画面">
+        </figure>
       </div>
     </div>
 
