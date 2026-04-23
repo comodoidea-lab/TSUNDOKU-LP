@@ -290,6 +290,13 @@ footer{background:#1f1712;color:#d9c79a;padding:56px 0 24px;border-top:6px solid
 footer h4{font-family:'DotGothic16';font-size:13px;color:#f2e7c9;margin-bottom:14px;letter-spacing:.08em}
 footer a{color:#b8a87e;text-decoration:none;font-size:13px;display:block;padding:4px 0}
 footer a:hover{color:#f2e7c9}
+.foot-static-item{color:#8a7a5a;font-size:13px;display:block;padding:4px 0}
+.foot-brand-icon{
+  width:20px;
+  height:20px;
+  image-rendering:pixelated;
+  display:block;
+}
 .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:30px}
 .foot-bottom{border-top:2px solid #3a2a1a;padding-top:18px;display:flex;justify-content:space-between;font-size:11px;color:#8a7a5a;font-family:'DotGothic16'}
 
@@ -846,7 +853,7 @@ header{
     <div class="foot-grid">
       <div>
         <div class="brand" style="color:#f2e7c9;margin-bottom:12px">
-          <span class="brand-logo" style="background:#f2e7c9;color:#1f1712">▣</span>
+          <span class="brand-logo" style="background:#f2e7c9;color:#1f1712"><img class="foot-brand-icon" src="./favicon.png" alt="TSUNDOKU QUEST アイコン"></span>
           <span>TSUNDOKU QUEST</span>
         </div>
         <p style="font-size:13px;line-height:1.9;color:#b8a87e;max-width:360px">
@@ -863,13 +870,13 @@ header{
         <h4>PRODUCT</h4>
         <a href="https://tsundoku.comodoidea.com/" target="_blank" rel="noopener">アプリを開く ↗</a>
         <a href="#features">機能一覧</a>
-        <a href="#quest">よくある困りごと</a>
+        <span class="foot-static-item">よくある困りごと(準備中)</span>
       </div>
       <div>
         <h4>DEVELOPER</h4>
         <a href="https://www.comodoidea.com/" target="_blank" rel="noopener">comodoidea ↗</a>
         <a href="https://www.comodoidea.com/" target="_blank" rel="noopener">個人開発について</a>
-        <a href="#" onclick="event.preventDefault();alert('お問い合わせは comodoidea.com より');">お問い合わせ</a>
+        <a href="mailto:info@comodoidea.com">お問い合わせ: info@comodoidea.com</a>
       </div>
       <div>
         <h4>LEGAL</h4>
