@@ -137,6 +137,12 @@ header{
 .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;font-family:'DotGothic16',sans-serif;font-size:18px}
 .brand-logo{width:26px;height:26px;background:var(--ink);display:grid;place-items:center;color:var(--parch);font-family:'DotGothic16';font-size:16px;border:3px solid var(--ink)}
+.head-brand-icon{
+  width:14px;
+  height:14px;
+  image-rendering:pixelated;
+  display:block;
+}
 nav ul{display:flex;gap:26px;list-style:none}
 nav a{color:var(--ink);text-decoration:none;font-family:'DotGothic16',sans-serif;font-size:15px}
 nav a:hover{color:var(--red-2)}
@@ -542,7 +548,7 @@ header{
 <header>
   <div class="wrap nav">
     <div class="brand">
-      <span class="brand-logo">▣</span>
+      <span class="brand-logo"><img class="head-brand-icon" src="./favicon.png" alt="TSUNDOKU QUEST アイコン"></span>
       <span>TSUNDOKU QUEST</span>
     </div>
     <nav>
